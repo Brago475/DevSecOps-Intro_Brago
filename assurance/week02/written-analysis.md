@@ -2,11 +2,11 @@
 
 CPS 5981 01, Week 02
 
-**Fork:** _not answered_
-**Commit:** _not answered_
-**Visibility:** _not answered_
+**Fork:** https://github.com/Brago475/DevSecOps-Intro_Brago
+**Commit:** f5743e439c6ce22c27ea97c7eaff22a80925a9e0
+**Visibility:** Public
 **Collaborators:** none
-**Declared AI use:** none
+**Declared AI use:** Used AI for wording and structure on the step 8 analysis answers, and for grammar on the mission sentence. The findings, the STRIDE decisions and the boundary reasoning are mine.
 
 ## 1. Which of your abuse cases are supported by evidence you gathered, and which rest on reasoning about the design?
 
