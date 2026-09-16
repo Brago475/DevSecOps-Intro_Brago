@@ -1,0 +1,21 @@
+flowchart LR
+  subgraph Z0["User's browser"]
+    NCustomer["Customer"]
+  end
+  subgraph Z1["Application server"]
+    NWebapplication(("Web application"))
+    NLoginservice(("Login service"))
+  end
+  subgraph Z2["Data store"]
+    NProductdatabase[("Product database")]
+    NPhotowalluploads[("Photo wall uploads")]
+  end
+  NCustomer -. "email address and password" .-> NLoginservice
+  NLoginservice -. "session token in a cookie" .-> NCustomer
+  NCustomer -. "search terms and order details" .-> NWebapplication
+  NWebapplication -. "product and order records" .-> NProductdatabase
+  NCustomer -. "photo file and caption" .-> NWebapplication
+  NWebapplication -. "photo file and caption" .-> NPhotowalluploads
+  NPhotowalluploads -. "photo file and caption shown to every customer" .-> NCustomer
+  NCustomer -. "review text displayed to other customers" .-> NWebapplication
+  %% dotted arrows cross a trust boundary; solid arrows stay inside one zone
